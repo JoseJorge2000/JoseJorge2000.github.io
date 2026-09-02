@@ -1,0 +1,32 @@
+# app-ads.txt — TEMPLATE, not yet valid
+#
+# Replace pub-0000000000000000 with the real AdMob publisher ID
+# (AdMob > Settings > Account information > Publisher ID), then delete these
+# comment lines. Comments are legal in the format but serve no purpose once
+# this is live.
+#
+# google.com          = the ad system domain
+# pub-XXXX...         = the publisher ID
+# DIRECT              = inventory sold directly, not via a reseller
+# f08c47fec0942fa0    = Google's TAG certification ID, identical for everyone
+#
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# --- Why this file lives in this repo -------------------------------------
+#
+# app-ads.txt MUST be served from the ROOT of the developer website declared on
+# the Play Store listing. A GitHub Pages *project* site cannot do that:
+#
+#   https://josejorge2000.github.io/CastleSurvivor/app-ads.txt   NO
+#   https://josejorge2000.github.io/app-ads.txt                  YES
+#
+# This repository is a GitHub Pages *user* site, so it serves from the root.
+# That is the entire reason it exists separately from the (private) game repo.
+#
+# Declare https://josejorge2000.github.io as the developer website on the Play
+# listing so Google knows where to look.
+#
+# Crawling is not instant — Google typically finds the file within about a day,
+# and AdMob reports "app-ads.txt not found" until it does. An unverified file
+# does not block ad serving, but it does depress fill rate and eCPM, so publish
+# the real publisher ID well before launch.
